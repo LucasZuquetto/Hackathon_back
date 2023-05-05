@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { createUser } from "../services/authentication-service";
+import { createUserService } from "../services/authentication-service";
 import httpStatus from "http-status";
 
 export async function signUpController(req: Request, res: Response) {
    try {
       const userObject = req.body;
-      const userCreated = await createUser(userObject);
+      const userCreated = await createUserService(userObject);
       res.send(userCreated);
    } catch (error:any) {
       if (error.code === httpStatus.BAD_REQUEST){
