@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  database:
+    image: postgres
+    container_name: sportStore-database-container
+    restart: always
+    ports:
+      - 2345:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=sportStore
+    volumes:
+      - pgdata:/data/postgres
+
+volumes:
+  pgdata:
+    driver: local
