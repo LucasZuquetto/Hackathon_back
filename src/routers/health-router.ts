@@ -1,7 +1,8 @@
 import { Router } from "express";
+import { verifyJWT } from "../middlewares/authentication-middleware";
 
-const healthRouter = Router()
+const healthRouter = Router();
 
-healthRouter.get("/", (_req,res) => res.send("OK!"))
+healthRouter.get("/", verifyJWT, (_req, res) => res.send("OK!"));
 
-export default healthRouter
+export default healthRouter;

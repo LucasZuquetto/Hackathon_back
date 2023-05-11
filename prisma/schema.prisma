@@ -11,7 +11,7 @@ model Users {
   id          Int      @id @default(autoincrement())
   email       String   @unique
   name        String
-  password    String?
+  password    String
   cpf         String
   dateOfBirth DateTime @db.Date
   createdAt   DateTime @default(now())

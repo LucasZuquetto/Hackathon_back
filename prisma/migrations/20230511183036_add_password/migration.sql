@@ -1,2 +1,2 @@
 -- AlterTable
-ALTER TABLE "Users" ADD COLUMN     "password" TEXT;
+ALTER TABLE "Users" ADD COLUMN     "password" TEXT NOT NULL;
