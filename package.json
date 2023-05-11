@@ -9,7 +9,8 @@
       "dev:migration:generate": "npm run dev:load-envs prisma migrate dev",
       "dev:migration:run": "npm run dev:load-envs prisma migrate deploy",
       "dev:db-pull": "npm run dev:load-envs prisma db pull",
-      "test:load-envs": "dotenv -e .env.test"
+      "test:load-envs": "dotenv -e .env.test",
+      "docker": "docker-compose up --build"
    },
    "keywords": [],
    "author": "",

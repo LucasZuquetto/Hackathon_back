@@ -3,14 +3,14 @@ version: '3.9'
 services:
   database:
     image: postgres
-    container_name: sportStore-database-container
+    container_name: betApp-database-container
     restart: always
     ports:
       - 2345:5432
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=12345
-      - POSTGRES_DB=sportStore
+      - POSTGRES_DB=betApp
     volumes:
       - pgdata:/data/postgres
 
