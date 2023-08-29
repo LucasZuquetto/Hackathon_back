@@ -1,4 +1,4 @@
-import { prisma } from "../config/database";
+// import { prisma } from "../config/database";
 
 export async function createUser({
    email,
@@ -13,7 +13,8 @@ export async function createUser({
    dateOfBirth: Date;
    password: string;
 }) {
-   return await prisma.users.create({
-      data: { email, name, cpf, dateOfBirth, password },
-   });
+   return
+   // return await prisma.users.create({
+   //    data: { email, name, cpf, dateOfBirth, password },
+   // });
 }

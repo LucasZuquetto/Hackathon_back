@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import { loadEnv } from "./config/envs";
-import router from "./routers";
+import { loadEnv } from "./config/envs.ts";
+import router from "./routers/index.ts";
 
 loadEnv();
 

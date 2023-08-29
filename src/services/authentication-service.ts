@@ -1,5 +1,5 @@
-import { badRequestError } from "../errors/badRequest-error";
-import { createUser } from "../repositories/authentication-repository";
+import { badRequestError } from "../errors/badRequest-error.ts";
+import { createUser } from "../repositories/authentication-repository.ts";
 
 export async function createUserService({
    email,

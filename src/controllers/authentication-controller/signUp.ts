@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { createUserService } from "../../services/authentication-service";
+import { createUserService } from "../../services/authentication-service.ts";
 import httpStatus from "http-status";
 
 export async function signUpController(req: Request, res: Response) {

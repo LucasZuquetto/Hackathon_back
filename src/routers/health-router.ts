@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { verifyJWT } from "../middlewares/authentication-middleware";
+import { verifyJWT } from "../middlewares/authentication-middleware.ts";
 
 const healthRouter = Router();
 

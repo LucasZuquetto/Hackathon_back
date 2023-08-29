@@ -1,5 +1,7 @@
-import { PrismaClient } from "@prisma/client";
+import { Sequelize } from "sequelize";
 
-const prisma = new PrismaClient();
+const sequelize = new Sequelize(
+   "postgresql://postgres:12345@localhost:2345/betApp?schema=public"
+);
 
-export { prisma };
+export { sequelize };

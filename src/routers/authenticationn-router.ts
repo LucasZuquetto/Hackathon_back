@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { validateUser } from "../middlewares/authentication-middleware";
-import { signInController } from "../controllers/authentication-controller/signIn";
-import { signUpController } from "../controllers/authentication-controller/signUp";
+import { validateUser } from "../middlewares/authentication-middleware.ts";
+import { signInController } from "../controllers/authentication-controller/signIn.ts";
+import { signUpController } from "../controllers/authentication-controller/signUp.ts";
 
 const authenticationRouter = Router();
 
