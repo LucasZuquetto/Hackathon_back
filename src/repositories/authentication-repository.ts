@@ -1,3 +1,4 @@
+import { User } from "../models/User.ts";
 
 export async function createUser({
    email,
@@ -8,8 +9,5 @@ export async function createUser({
    email: string;
    password: string;
 }) {
-   return
-   // return await prisma.users.create({
-   //    data: { email, name, cpf, dateOfBirth, password },
-   // });
+   return await User.create({ name, email, password });
 }
