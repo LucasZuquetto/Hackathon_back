@@ -1,16 +1,15 @@
 {
-   "name": "e-commerce_back",
+   "name": "desafio_hackathon_back",
    "version": "1.0.0",
    "description": "",
    "type": "module",
    "main": "index.js",
    "scripts": {
       "dev": "NODE_ENV=development ts-node-esm src/server.ts",
-      "dev:load-envs": "dotenv -e .env.development",
-      "dev:migration:generate": "npm run dev:load-envs prisma migrate dev",
-      "dev:migration:run": "npm run dev:load-envs prisma migrate deploy",
-      "dev:db-pull": "npm run dev:load-envs prisma db pull",
-      "test:load-envs": "dotenv -e .env.test",
+      "db:migrate": "cd sequelize/ && sequelize-cli db:migrate",
+      "db:create": "cd sequelize/ && npx sequelize-cli db:create",
+      "db:drop": "cd sequelize/ && npx sequelize-cli db:drop",
+      "sequelize-help": "cd sequelize/ && npx sequelize-cli --help",
       "docker": "docker-compose up --build"
    },
    "keywords": [],
@@ -22,6 +21,7 @@
       "@types/jsonwebtoken": "^9.0.2",
       "dotenv-cli": "^7.2.1",
       "nodemon": "^2.0.22",
+      "sequelize-cli": "^6.6.1",
       "ts-node": "^10.9.1",
       "typescript": "^5.0.4"
    },

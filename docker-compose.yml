@@ -3,14 +3,14 @@ version: '3.9'
 services:
   database:
     image: postgres
-    container_name: betApp-database-container
+    container_name: hackathon_dev-database-container
     restart: always
     ports:
       - 2345:5432
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=12345
-      - POSTGRES_DB=betApp
+      - POSTGRES_DB=hackathon_dev
     volumes:
       - pgdata:/data/postgres
 
