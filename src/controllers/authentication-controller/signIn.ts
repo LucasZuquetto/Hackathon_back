@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import * as jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 
 export async function signInController(req: Request, res: Response) {
    if (!process.env.JWT_SECRET) {
