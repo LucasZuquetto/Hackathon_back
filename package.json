@@ -6,10 +6,11 @@
    "main": "index.js",
    "scripts": {
       "dev": "NODE_ENV=development ts-node-esm src/server.ts",
-      "db:migrate": "cd sequelize/ && sequelize-cli db:migrate",
-      "db:create": "cd sequelize/ && npx sequelize-cli db:create",
-      "db:drop": "cd sequelize/ && npx sequelize-cli db:drop",
-      "sequelize-help": "cd sequelize/ && npx sequelize-cli --help",
+      "db:migrate": "sequelize-cli db:migrate",
+      "db:create": "npx sequelize-cli db:create",
+      "db:drop": "npx sequelize-cli db:drop",
+      "db:seed:all":"npx sequelize-cli db:seed:all",
+      "sequelize-help": "npx sequelize-cli --help",
       "docker": "docker-compose up --build"
    },
    "keywords": [],
