@@ -1,7 +1,10 @@
 import app from "./app.ts";
 import { sequelize } from "./config/database.ts";
+import dotenv from "dotenv";
 
-const port = process.env.PORT || 4000;
+dotenv.config();
+
+const port = process.env.PORT || 4001;
 
 try {
    await sequelize.authenticate();
