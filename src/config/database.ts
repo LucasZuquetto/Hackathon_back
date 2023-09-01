@@ -1,7 +1,13 @@
 import { Sequelize } from "sequelize";
+import { initModels } from "../models/init-models.ts";
+import dotenv from "dotenv";
 
-const sequelize = new Sequelize(
-   "postgresql://postgres:12345@localhost:2345/hackathon_dev?schema=public"
-);
+dotenv.config();
 
-export { sequelize };
+const databaseUrl = process.env.DATABASE_URL || ''
+
+const sequelize = new Sequelize(databaseUrl);
+
+const dbTables = initModels(sequelize);
+
+export { sequelize, dbTables };

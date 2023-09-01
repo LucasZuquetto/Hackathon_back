@@ -5,13 +5,14 @@
    "type": "module",
    "main": "index.js",
    "scripts": {
-      "dev": "NODE_ENV=development ts-node-esm src/server.ts",
+      "dev": "NODE_OPTIONS='--experimental-specifier-resolution=node' NODE_ENV=development ts-node-esm src/server.ts",
       "db:migrate": "sequelize-cli db:migrate",
       "db:create": "npx sequelize-cli db:create",
       "db:drop": "npx sequelize-cli db:drop",
       "db:seed:all": "npx sequelize-cli db:seed:all",
       "sequelize-help": "npx sequelize-cli --help",
-      "docker": "docker-compose up --build"
+      "docker": "docker-compose up --build",
+      "db:pull":"npx sequelize-auto -h 127.0.0.1 -d hackathon_dev -u postgres -x 12345 -p 2345 --dialect postgres -l ts --cm p -o ./src/models"
    },
    "keywords": [],
    "author": "",
@@ -34,6 +35,7 @@
       "jsonwebtoken": "^9.0.0",
       "pg": "^8.11.3",
       "pg-hstore": "^2.3.4",
-      "sequelize": "^6.32.1"
+      "sequelize": "^6.32.1",
+      "sequelize-auto": "^0.8.8"
    }
 }
