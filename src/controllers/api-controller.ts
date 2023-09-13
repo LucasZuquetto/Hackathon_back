@@ -19,7 +19,7 @@ export async function createController(req: Request, res: Response) {
       res.send(createdObject);
    } catch (error: any) {
       if(error.name = "SequelizeValidationError"){
-         return res.status(400).send(error.errors.map((error: any) => error.message));
+         return res.status(400).send(error?.errors?.map((error: any) => error.message));
       }
       console.log(error.errors.map((error:any) => error.path))
       res.status(404).send(error.name);

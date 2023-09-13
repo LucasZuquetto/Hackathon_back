@@ -8,6 +8,6 @@ const router = Router();
 router
    .use("/health", healthRouter)
    .use("/", authenticationRouter)
-   .use("/", apiRouter);
+   .use("/api", apiRouter);
 
 export default router;

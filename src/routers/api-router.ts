@@ -7,7 +7,7 @@ import {
 const apiRouter = Router();
 
 apiRouter
-   .get("/read/:tableName", readController)
-   .post("/create/:tableName", createController);
+   .get("/:tableName", readController)
+   .post("/:tableName", createController);
 
 export default apiRouter;
